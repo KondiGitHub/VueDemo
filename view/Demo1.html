@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>VueJS</title>
@@ -9,7 +9,7 @@
 <body>
 <div id="app">
     <input type="text" v-on:input="changeTitle">
-    <p>{{sayHello()}}</p>
+    <p>{{sayHello()}}-  <a v-bind:href="link">Google</a></p>
 
 </div>
 <script>
