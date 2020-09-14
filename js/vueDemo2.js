@@ -4,7 +4,13 @@ createVueDemo = function () {
         el: '#app',
         data: {
             title: 'Hello World'
+        },
+        methods: {
+            sayHello: function () {
+                return this.title + " Vue.js"
+
+            }
         }
     });
-};
+}
 
