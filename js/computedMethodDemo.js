@@ -6,13 +6,10 @@ createVueDemo = function () {
             title: 'Hello World'
         },
         template: '<div>{{ sayHello }}</div>',
-        methods: {
+        computed: {
             sayHello: function () {
-                return this.title
+                return this.title.toUpperCase()
 
-            },
-            changeTitle : function (event) {
-                this.title= event.target.value;
             }
         }
     });
