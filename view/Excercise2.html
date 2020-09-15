@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <Script src="../lib/vue.min.js"></Script>
+    <Script src="../js/excercise2.js"></Script>
+</head>
+<body>
+<div id="excercise2">
+    <div>
+        <button v-on:click="clickMe">Show Alert</button>
+    </div>
+
+    <div>
+        <input type="text" v-on:keydown="keyDown">
+        <p>{{keyDownValue}}</p>
+    </div>
+
+    <div>
+        <input type="text" v-on:keydown.enter="keyDown2">
+        <p>{{keyDownValue2}}</p>
+    </div>
+
+
+</div>
+<script>createVueDemo()</script>
+</body>
+</html>
