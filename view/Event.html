@@ -8,8 +8,9 @@
 </head>
 <body>
 <div id="app">
-    <button v-on:click="increase">Click Me</button>
+    <button v-on:click="increase(10, $event)">Click Me</button>
     <p>{{counter}}</p>
+    <p v-on:mousemove="updateCoordinates">Coordinates::{{x}}/{{y}}</pv-on:mousemove></p>
 
 </div>
 <script>createVueDemo()</script>
