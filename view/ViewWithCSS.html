@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <Script src="../lib/vue.min.js"></Script>
+    <script type="text/css" src="../css/styles.css"></script>
+</head>
+<body>
+<div id="app">
+    <div class="demo"
+         @click="redAttached = !redAttached"
+         :class="{red: redAttached}"></div>
+    <div class="demo green"></div>
+    <div class="demo blue"></div>
+
+</div>
+<script>
+
+    new Vue({
+        el: '#app',
+        data: {
+            redAttached: false,
+            greenAttached: false,
+            blueAttached: false
+        }
+
+    });
+
+</script>
+</body>
+</html>

@@ -3,13 +3,30 @@ createVueDemo = function () {
     new Vue({
         el: '#app',
         data: {
-            title: 'Hello World'
+            counter: 0,
+            secondCounter: 0
         },
-        template: '<div>{{ sayHello }}</div>',
         computed: {
-            sayHello: function () {
-                return this.title.toUpperCase()
+            output: function () {
+                console.log("computed");
+                return this.counter >5 ? 'Greater 5': 'Smaller 5'
 
+            }
+        },
+        watch: {
+
+            counter : function() {
+                var vm = this;
+                setTimeout(function(){
+                    vm.counter = 0;
+                },2000)
+            }
+
+        },
+        methods: {
+            result: function () {
+                console.log("methods");
+                return this.counter >5 ? 'Greater 5': 'Smaller 5'
             }
         }
     });

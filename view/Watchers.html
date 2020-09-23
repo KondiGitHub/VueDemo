@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <Script src="../lib/vue.min.js"></Script>
+</head>
+<body>
+<div id="app"></div>
+
+<script>
+
+    var app = new Vue({
+        el: '#app',
+        data: {
+            searchText: "",
+            results: []
+        },
+        watch: {
+            searchText: function(newSearchText, oldSearchText) {
+                console.log("newSearchText::"+newSearchText +",,,,oldSearchText::"+oldSearchText);
+            }
+        },
+        template: `
+    <div>
+    <label>Search:
+    <input type="text" v-model="searchText" /></label>
+    <h5>Results: <small>{{searchText}}</small></h5>
+    </div>
+    `
+    });
+</script>
+</body>
+</html>
